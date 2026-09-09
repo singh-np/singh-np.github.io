@@ -270,6 +270,26 @@ hr.rule {
   border-bottom-color: var(--cyan);
 }
 
+.contact-list--main {
+  max-width: 34rem;
+}
+.contact-list--main li {
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.92rem;
+}
+.contact-list--main .k {
+  color: var(--muted);
+}
+.contact-list--main .v {
+  color: var(--ink);
+}
+.contact-list--main .v a {
+  color: var(--cyan-strong);
+}
+.contact-list--main .v a:hover {
+  color: var(--amber);
+}
+
 .panels { max-width: var(--content-max); }
 
 .page-section { display: none; }
