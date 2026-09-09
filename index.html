@@ -38,18 +38,6 @@
       <p class="role">Assistant Professor (Contractual)</p>
       <p class="dept">Department of Physics, Faculty of Science<br>The Maharaja Sayajirao University of Baroda<br>Vadodara&nbsp;390002, Gujarat, India</p>
 
-      <nav class="quicklinks" aria-label="Section navigation">
-        <a href="#research">Research</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#study-material">Study material</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Project ideas</a>
-        <a href="#activity">Activity &amp; awards</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
       <div class="sidebar-divider" role="separator"></div>
 
       <div class="contact-block" id="contact">
@@ -86,8 +74,23 @@
 
     <hr class="rule">
 
+    <!-- ============ HORIZONTAL SECTION TABS ============ -->
+    <nav class="top-tabs" id="topTabs" aria-label="Page sections">
+      <button class="top-tab active" data-target="research" aria-selected="true">Research</button>
+      <button class="top-tab" data-target="education" aria-selected="false">Education</button>
+      <button class="top-tab" data-target="experience" aria-selected="false">Experience</button>
+      <button class="top-tab" data-target="teaching" aria-selected="false">Teaching</button>
+      <button class="top-tab" data-target="study-material" aria-selected="false">Study material</button>
+      <button class="top-tab" data-target="publications" aria-selected="false">Publications</button>
+      <button class="top-tab" data-target="projects" aria-selected="false">Project ideas</button>
+      <button class="top-tab" data-target="activity" aria-selected="false">Activity &amp; awards</button>
+    </nav>
+
+    <!-- ============ TABBED PANELS ============ -->
+    <div class="panels">
+
     <!-- RESEARCH INTERESTS -->
-    <section id="research" class="section">
+    <section id="research" class="section page-section active">
       <h3 class="section-title">Research interests</h3>
       <div class="interest-grid">
         <div class="interest-card">
@@ -117,10 +120,8 @@
       </div>
     </section>
 
-    <hr class="rule">
-
     <!-- EDUCATION -->
-    <section id="education" class="section">
+    <section id="education" class="section page-section">
       <h3 class="section-title">Education</h3>
       <ol class="timeline">
         <li class="timeline-item">
@@ -149,10 +150,8 @@
       </ol>
     </section>
 
-    <hr class="rule">
-
     <!-- EXPERIENCE -->
-    <section id="experience" class="section">
+    <section id="experience" class="section page-section">
       <h3 class="section-title">Academic &amp; research experience</h3>
       <ol class="timeline">
         <li class="timeline-item">
@@ -180,10 +179,8 @@
       </ol>
     </section>
 
-    <hr class="rule">
-
     <!-- TEACHING -->
-    <section id="teaching" class="section">
+    <section id="teaching" class="section page-section">
       <h3 class="section-title">Teaching</h3>
       <p class="section-intro">Current courses at MSU Baroda:</p>
       <table class="course-table" id="courseTable">
@@ -204,19 +201,15 @@
       </table>
     </section>
 
-    <hr class="rule">
-
     <!-- STUDY MATERIAL -->
-    <section id="study-material" class="section">
+    <section id="study-material" class="section page-section">
       <h3 class="section-title">Study material</h3>
       <p class="section-intro">Course-wise notes, problem sets and lab manuals will be published here as PDFs. Placeholders are shown below — replace each with a real link once a file is uploaded.</p>
       <div class="material-grid" id="materialGrid"></div>
     </section>
 
-    <hr class="rule">
-
     <!-- PUBLICATIONS -->
-    <section id="publications" class="section">
+    <section id="publications" class="section page-section">
       <h3 class="section-title">Publications</h3>
 
       <div class="pub-tabs" role="tablist" aria-label="Publication type">
@@ -231,19 +224,15 @@
       <ol class="pub-list" id="pub-poster"></ol>
     </section>
 
-    <hr class="rule">
-
     <!-- PROJECT IDEAS -->
-    <section id="projects" class="section">
+    <section id="projects" class="section page-section">
       <h3 class="section-title">Project ideas</h3>
       <p class="section-intro">Directions I would like to pursue with students or as part of a postdoctoral collaboration — reach out on <a href="#contact">email</a> if any of these overlap with your interests.</p>
       <div class="project-grid" id="projectGrid"></div>
     </section>
 
-    <hr class="rule">
-
     <!-- ACTIVITY / AWARDS / SKILLS -->
-    <section id="activity" class="section">
+    <section id="activity" class="section page-section">
       <h3 class="section-title">Activity &amp; awards</h3>
 
       <h4 class="sub-title">Awards</h4>
@@ -297,6 +286,8 @@
       <h4 class="sub-title">Schools, conferences &amp; workshops</h4>
       <div class="conf-list" id="confList"></div>
     </section>
+
+    </div><!-- /.panels -->
 
     <hr class="rule">
 

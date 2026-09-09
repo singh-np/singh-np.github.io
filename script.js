@@ -238,6 +238,37 @@ function setupPubTabs() {
   });
 }
 
+/* ---------- horizontal top tabs (page sections) ---------- */
+function setupTopTabs() {
+  const tabs = document.querySelectorAll(".top-tab");
+  const panels = document.querySelectorAll(".page-section");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+      panels.forEach((p) => p.classList.remove("active"));
+      tab.classList.add("active");
+      tab.setAttribute("aria-selected", "true");
+      document.getElementById(tab.dataset.target).classList.add("active");
+      document.querySelector(".top-tabs").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
+/* Let links elsewhere on the page (e.g. "reach out on email") jump to a
+   tab and open the right panel, not just scroll to a hidden section. */
+function setupCrossLinks() {
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    const targetId = link.getAttribute("href").slice(1);
+    const tab = document.querySelector(`.top-tab[data-target="${targetId}"]`);
+    if (tab) {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        tab.click();
+      });
+    }
+  });
+}
+
 /* ---------- mobile nav toggle ---------- */
 function setupNavToggle() {
   const btn = document.getElementById("navToggle");
@@ -264,5 +295,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderPosters();
   renderConferences();
   setupPubTabs();
+  setupTopTabs();
+  setupCrossLinks();
   setupNavToggle();
 });
