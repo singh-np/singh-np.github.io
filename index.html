@@ -3,535 +3,311 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ratan — Nuclear Astrophysics Research</title>
-<meta name="description" content="Personal academic site of Ratan, researcher in nuclear astrophysics: reaction rates, nucleosynthesis, nuclear structure, teaching, and study material.">
-
-<!-- Favicon: simple inline nuclide-orbit mark, no external file needed -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%230E1218'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%234FB8AC'/%3E%3Cellipse cx='12' cy='12' rx='9' ry='3.6' stroke='%234FB8AC' stroke-width='1' fill='none'/%3E%3Cellipse cx='12' cy='12' rx='9' ry='3.6' stroke='%239C8FD9' stroke-width='1' fill='none' transform='rotate(60 12 12)'/%3E%3C/svg%3E">
-
-<!-- Social preview. Add a real assets/social-card.png (1200x630) and uncomment og:image for a rich preview when shared. -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ratan — Nuclear Astrophysics Research">
-<meta property="og:description" content="Reaction rates, nucleosynthesis, nuclear structure, teaching, and study material in nuclear astrophysics.">
-<!-- <meta property="og:image" content="assets/social-card.png"> -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ratan — Nuclear Astrophysics Research">
-<meta name="twitter:description" content="Reaction rates, nucleosynthesis, nuclear structure, teaching, and study material in nuclear astrophysics.">
-
-<!-- Structured data for search engines / citation tools. Fill in the bracketed fields. -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Ratan",
-  "jobTitle": "[Your title, e.g. PhD Candidate]",
-  "affiliation": { "@type": "CollegeOrUniversity", "name": "[Your institution]" },
-  "url": "[Your site URL, e.g. https://yourname.github.io]",
-  "sameAs": ["[Google Scholar profile URL]", "[ORCID URL]", "[GitHub URL]"],
-  "knowsAbout": ["Nuclear astrophysics", "Nucleosynthesis", "Nuclear reaction rates", "Nuclear level density"]
-}
-</script>
-
+<title>Dr. Ratan Kumar Singh — Nuclear Physics</title>
+<meta name="description" content="Academic homepage of Dr. Ratan Kumar Singh, Assistant Professor, Department of Physics, The Maharaja Sayajirao University of Baroda. Experimental nuclear reactions, cross-section measurement, covariance analysis and nuclear astrophysics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
-<!-- MathJax: lets any \( ... \) or $$ ... $$ in the page text render as typeset math -->
-<script>window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$', '$$']] } };</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js" defer></script>
 </head>
-<body class="onepage">
+<body>
 
-<!-- ================= TOP NAVIGATION (horizontal) ================= -->
-<header class="topnav">
-  <div class="brand">
-    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="#4FB8AC"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="#4FB8AC" stroke-width="1" fill="none"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="#9C8FD9" stroke-width="1" fill="none" transform="rotate(60 12 12)"/></svg>
-    <span class="brand-name">Ratan</span>
-  </div>
-  <nav aria-label="Primary">
-    <ul class="topnav-links">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#teaching">Teaching</a></li>
-      <li><a href="#study">Study material</a></li>
-      <li><a href="#projects">Project ideas</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="topnav-right">
-    <button class="theme-toggle" aria-label="Toggle light and dark theme">
-      <span class="label-dark">Light</span><span class="label-light">Dark</span>
-    </button>
-    <button class="nav-toggle" aria-expanded="false">Menu</button>
-  </div>
-</header>
-<nav class="mobile-nav">
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#research">Research</a></li>
-    <li><a href="#publications">Publications</a></li>
-    <li><a href="#teaching">Teaching</a></li>
-    <li><a href="#study">Study material</a></li>
-    <li><a href="#projects">Project ideas</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+<button id="navToggle" class="nav-toggle" aria-label="Toggle contact panel" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
 
-<div class="page-shell">
+<div class="layout">
 
-  <!-- ================= PROFILE COLUMN (photo + contact) ================= -->
-  <aside class="profile-col">
-    <div class="avatar-wrap">
-      <!-- Replace images/photo.jpg with your own image. Until then, initials show automatically. -->
-      <img src="images/photo.jpg" alt="Photo of Ratan" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-      <span class="avatar-fallback">R</span>
-    </div>
-    <p class="profile-name">Ratan</p>
-    <p class="profile-role">[Your title]<br>[Department, Institution]</p>
+  <!-- ============ LEFT SIDEBAR ============ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-inner">
 
-    <div class="profile-contact">
-      <a class="icon-link" href="mailto:your.email@university.edu"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg> your.email@university.edu</a>
-      <a class="icon-link" href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7z"/></svg> Google Scholar ↗</a>
-      <a class="icon-link" href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 10h1.5v6H8zM8.7 8.3a.9.9 0 110-1.8.9.9 0 010 1.8zM11.5 16v-4c0-1 .6-1.7 1.7-1.7 1 0 1.6.7 1.6 1.8V16"/></svg> ORCID ↗</a>
-      <a class="icon-link" href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 19c-4 1-4-2-6-2m12 4v-3.4c0-1 .4-1.6.8-2C13 15 16 14 16 9.5A4.6 4.6 0 0015 6a4.3 4.3 0 00-.1-3.2s-1-.3-3.2 1.2a11 11 0 00-5.8 0C3.6 2.5 2.6 2.8 2.6 2.8A4.3 4.3 0 002.5 6a4.6 4.6 0 00-1 3.5c0 4.5 3 5.5 5.2 5.9-.3.4-.6 1-.7 2V21"/></svg> GitHub ↗</a>
-      <a class="icon-link" href="cv.pdf"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg> CV (PDF) ↗</a>
-    </div>
-    <a class="btn small" href="#contact">Get in touch</a>
-  </aside>
-
-  <!-- ================= CONTENT COLUMN ================= -->
-  <main class="content-col">
-
-    <!-- ================= HOME (research profile + academic details) ================= -->
-    <section id="home" class="home-intro">
-      <p class="eyebrow-note">Nuclear astrophysics · reaction rates · nucleosynthesis</p>
-      <h1>Ratan</h1>
-      <p class="tagline">I study how nuclei are forged in stars — thermonuclear reaction rates, nuclear level densities, and the reaction networks that reproduce solar and stellar isotopic abundances, from the γ‑process to the r‑process.</p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#research">See my research</a>
-        <a class="btn" href="#publications">Publications</a>
-        <a class="btn" href="#contact">Get in touch</a>
-      </div>
-
-      <h2 style="margin-top:2.2rem;">Research profile</h2>
-      <p>I work on the nuclear physics that underlies stellar and explosive nucleosynthesis: computing thermonuclear reaction rates, modelling nuclear level densities and γ‑ray strength functions, and running reaction‑network calculations that connect microscopic nuclear inputs to the isotopic abundances we observe in stars, meteorites, and the solar system. Much of my work sits at the interface of nuclear structure theory, statistical (Hauser–Feshbach) reaction theory, and astrophysical modelling.</p>
-      <p class="muted">[Add 3–5 sentences here: your academic background, current position, institution, and what drew you to nuclear astrophysics. Keep it in your own voice — this paragraph is the one visitors read most closely.]</p>
-
-      <h3>Academic details</h3>
-      <table>
-        <tbody>
-          <tr><td class="muted" style="width:9rem;">Position</td><td>[Your title, e.g. PhD Candidate]</td></tr>
-          <tr><td class="muted">Institution</td><td>[Department, University]</td></tr>
-          <tr><td class="muted">Degree</td><td>[e.g. PhD in Physics, expected 20XX]</td></tr>
-          <tr><td class="muted">Advisor</td><td>[Advisor name, if applicable]</td></tr>
-        </tbody>
-      </table>
-
-      <h3>Current focus</h3>
-      <ul class="card-list">
-        <li class="tone-teal">
-          <p class="entry-title">γ‑process reaction networks</p>
-          <p class="entry-body">Reproducing thermonuclear rate calculations from the literature and tackling the numerical stiffness of one‑zone network integration with damped Picard iteration.</p>
-        </li>
-        <li class="tone-violet">
-          <p class="entry-title">Bayesian uncertainty quantification for nuclear level densities</p>
-          <p class="entry-body">MCMC‑based (emcee) uncertainty quantification for Back‑Shifted Fermi Gas level‑density parameters, benchmarked against published fits.</p>
-        </li>
-      </ul>
-
-      <div class="hero-figure" aria-hidden="true">
-        <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylised nuclide chart with a highlighted reaction path">
-          <circle cx="20" cy="20" r="2" fill="#2A3341" /><circle cx="52" cy="20" r="2" fill="#2A3341" /><circle cx="84" cy="20" r="2" fill="#2A3341" /><circle cx="116" cy="20" r="2" fill="#2A3341" /><circle cx="148" cy="20" r="2" fill="#2A3341" /><circle cx="180" cy="20" r="2" fill="#2A3341" /><circle cx="212" cy="20" r="2" fill="#2A3341" /><circle cx="244" cy="20" r="2" fill="#2A3341" /><circle cx="276" cy="20" r="2" fill="#2A3341" />
-          <circle cx="20" cy="52" r="2" fill="#2A3341" /><circle cx="52" cy="52" r="2" fill="#2A3341" /><circle cx="84" cy="52" r="2" fill="#2A3341" /><circle cx="116" cy="52" r="2" fill="#2A3341" /><circle cx="148" cy="52" r="2" fill="#2A3341" /><circle cx="180" cy="52" r="2" fill="#2A3341" /><circle cx="212" cy="52" r="2" fill="#2A3341" /><circle cx="244" cy="52" r="2" fill="#2A3341" /><circle cx="276" cy="52" r="2" fill="#2A3341" />
-          <circle cx="20" cy="84" r="2" fill="#2A3341" /><circle cx="52" cy="84" r="2" fill="#2A3341" /><circle cx="84" cy="84" r="2" fill="#2A3341" /><circle cx="116" cy="84" r="2" fill="#2A3341" /><circle cx="148" cy="84" r="2" fill="#2A3341" /><circle cx="180" cy="84" r="2" fill="#2A3341" /><circle cx="212" cy="84" r="2" fill="#2A3341" /><circle cx="244" cy="84" r="2" fill="#2A3341" /><circle cx="276" cy="84" r="2" fill="#2A3341" />
-          <circle cx="20" cy="116" r="2" fill="#2A3341" /><circle cx="52" cy="116" r="2" fill="#2A3341" /><circle cx="84" cy="116" r="2" fill="#2A3341" /><circle cx="116" cy="116" r="2" fill="#2A3341" /><circle cx="148" cy="116" r="2" fill="#2A3341" /><circle cx="180" cy="116" r="2" fill="#2A3341" /><circle cx="212" cy="116" r="2" fill="#2A3341" /><circle cx="244" cy="116" r="2" fill="#2A3341" /><circle cx="276" cy="116" r="2" fill="#2A3341" />
-          <circle cx="20" cy="148" r="2" fill="#2A3341" /><circle cx="52" cy="148" r="2" fill="#2A3341" /><circle cx="84" cy="148" r="2" fill="#2A3341" /><circle cx="116" cy="148" r="2" fill="#2A3341" /><circle cx="148" cy="148" r="2" fill="#2A3341" /><circle cx="180" cy="148" r="2" fill="#2A3341" /><circle cx="212" cy="148" r="2" fill="#2A3341" /><circle cx="244" cy="148" r="2" fill="#2A3341" /><circle cx="276" cy="148" r="2" fill="#2A3341" />
-          <circle cx="20" cy="180" r="2" fill="#2A3341" /><circle cx="52" cy="180" r="2" fill="#2A3341" /><circle cx="84" cy="180" r="2" fill="#2A3341" /><circle cx="116" cy="180" r="2" fill="#2A3341" /><circle cx="148" cy="180" r="2" fill="#2A3341" /><circle cx="180" cy="180" r="2" fill="#2A3341" /><circle cx="212" cy="180" r="2" fill="#2A3341" /><circle cx="244" cy="180" r="2" fill="#2A3341" /><circle cx="276" cy="180" r="2" fill="#2A3341" />
-          <circle cx="20" cy="212" r="2" fill="#2A3341" /><circle cx="52" cy="212" r="2" fill="#2A3341" /><circle cx="84" cy="212" r="2" fill="#2A3341" /><circle cx="116" cy="212" r="2" fill="#2A3341" /><circle cx="148" cy="212" r="2" fill="#2A3341" /><circle cx="180" cy="212" r="2" fill="#2A3341" /><circle cx="212" cy="212" r="2" fill="#2A3341" /><circle cx="244" cy="212" r="2" fill="#2A3341" /><circle cx="276" cy="212" r="2" fill="#2A3341" />
-          <polyline points="20,212 52,180 84,180 116,148 148,148 180,116 212,116 244,84 276,84" fill="none" stroke="#4FB8AC" stroke-width="1.4" opacity=".85" class="pulse-path"/>
-          <line x1="84" y1="180" x2="84" y2="148" stroke="#9C8FD9" stroke-width="1.2" stroke-dasharray="3 4" opacity=".8"/>
-          <line x1="180" y1="116" x2="180" y2="84" stroke="#9C8FD9" stroke-width="1.2" stroke-dasharray="3 4" opacity=".8"/>
-          <circle cx="20" cy="212" r="4" fill="#4FB8AC"/><circle cx="52" cy="180" r="4" fill="#4FB8AC"/><circle cx="84" cy="180" r="4" fill="#4FB8AC"/><circle cx="116" cy="148" r="4" fill="#4FB8AC"/><circle cx="148" cy="148" r="4" fill="#4FB8AC"/><circle cx="180" cy="116" r="4" fill="#4FB8AC"/><circle cx="212" cy="116" r="4" fill="#4FB8AC"/><circle cx="244" cy="84" r="4" fill="#4FB8AC"/>
-          <circle cx="276" cy="84" r="4.5" fill="#EAFBF8" stroke="#4FB8AC" stroke-width="1.5"/>
-          <circle cx="84" cy="148" r="3.5" fill="#9C8FD9"/><circle cx="180" cy="84" r="3.5" fill="#9C8FD9"/>
-          <text x="118" y="232" font-family="IBM Plex Sans, sans-serif" font-size="9" fill="#7C8290">stable / observed abundance</text>
-          <text x="118" y="10" font-family="IBM Plex Sans, sans-serif" font-size="9" fill="#7C8290">(p,γ) / (γ,p) network path</text>
+      <div class="portrait" role="img" aria-label="Portrait placeholder for Dr. Ratan Kumar Singh">
+        <svg viewBox="0 0 200 200" class="portrait-svg" aria-hidden="true">
+          <circle cx="100" cy="100" r="86" class="orbit orbit-1"/>
+          <circle cx="100" cy="100" r="70" class="orbit orbit-2"/>
+          <polygon points="100,20 165,58 165,142 100,180 35,142 35,58" class="hex"/>
+          <circle cx="100" cy="100" r="4" class="nucleus"/>
+          <circle class="electron e1" cx="100" cy="14" r="4"/>
+          <circle class="electron e2" cx="184" cy="100" r="4"/>
+          <text x="100" y="112" text-anchor="middle" class="initials">RKS</text>
         </svg>
       </div>
+
+      <h1 class="name">Dr. Ratan Kumar Singh</h1>
+      <p class="role">Assistant Professor (Contractual)</p>
+      <p class="dept">Department of Physics, Faculty of Science<br>The Maharaja Sayajirao University of Baroda<br>Vadodara&nbsp;390002, Gujarat, India</p>
+
+      <nav class="quicklinks" aria-label="Section navigation">
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#study-material">Study material</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Project ideas</a>
+        <a href="#activity">Activity &amp; awards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="sidebar-divider" role="separator"></div>
+
+      <div class="contact-block" id="contact">
+        <p class="contact-label">Contact</p>
+        <ul class="contact-list">
+          <li><span class="k">Phone</span><span class="v">+91 63549&nbsp;40665</span></li>
+          <li><span class="k"></span><span class="v">+91 84606&nbsp;02735</span></li>
+          <li><span class="k">Email</span><span class="v"><a href="mailto:ratankumar339@gmail.com">ratankumar339@gmail.com</a></span></li>
+          <li><span class="k"></span><span class="v"><a href="mailto:ratankumar.s-phy@msubaroda.ac.in">ratankumar.s&#8209;phy@msubaroda.ac.in</a></span></li>
+          <li><span class="k">ORCID</span><span class="v"><a href="https://orcid.org/0000-0003-1711-2319" target="_blank" rel="noopener">0000&#8209;0003&#8209;1711&#8209;2319</a></span></li>
+          <li><span class="k">Address</span><span class="v">A&#8209;103 Auro Residency, Bill Canal Road, Atladara, Vadodara 391410, Gujarat, India</span></li>
+          <li><span class="k">Languages</span><span class="v">English, Hindi, Gujarati</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="content">
+
+    <!-- HERO -->
+    <header class="hero">
+      <p class="eyebrow-plain">Experimental Nuclear Physics</p>
+      <h2 class="hero-title">Cross-sections, covariance and the physics that feeds nuclear data.</h2>
+      <p class="hero-lede">I measure neutron- and proton-induced reaction cross sections close to and above the Coulomb barrier, and work the resulting numbers into reaction networks for reactor materials and stellar nucleosynthesis — quantifying every uncertainty along the way with covariance analysis and unscented Kalman filtering.</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">30</span><span class="stat-label">journal publications</span></div>
+        <div class="stat"><span class="stat-num">16</span><span class="stat-label">conference proceedings</span></div>
+        <div class="stat"><span class="stat-num">2016–24</span><span class="stat-label">Ph.D., MSU Baroda</span></div>
+        <div class="stat"><span class="stat-num">10</span><span class="stat-label">students mentored</span></div>
+      </div>
+    </header>
+
+    <hr class="rule">
+
+    <!-- RESEARCH INTERESTS -->
+    <section id="research" class="section">
+      <h3 class="section-title">Research interests</h3>
+      <div class="interest-grid">
+        <div class="interest-card">
+          <h4>Reactor &amp; astrophysical reactions</h4>
+          <p>Reactions relevant to reactor materials, and nuclear reactions of astrophysical interest across the s-, r-, i- and p-processes.</p>
+        </div>
+        <div class="interest-card">
+          <h4>Near-barrier reaction dynamics</h4>
+          <p>Nuclear reactions close to the Coulomb barrier, and the resulting fusion / fission dynamics.</p>
+        </div>
+        <div class="interest-card">
+          <h4>γ-ray spectrometry</h4>
+          <p>Activation analysis and isotope identification using HPGe and scintillation detector systems.</p>
+        </div>
+        <div class="interest-card">
+          <h4>Thermonuclear reaction rates</h4>
+          <p>Building reaction rates for use in stellar nucleosynthesis and reaction-network codes.</p>
+        </div>
+        <div class="interest-card">
+          <h4>Uncertainty quantification</h4>
+          <p>Parameter estimation with the unscented Kalman filter, and full covariance analysis of measured cross sections.</p>
+        </div>
+        <div class="interest-card">
+          <h4>Bayesian statistics &amp; networks</h4>
+          <p>Bayesian inference applied to nuclear data evaluation and nuclear reaction network modelling.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- ================= NEWS ================= -->
-    <section id="news" class="section-block">
-      <div class="section-head"><h2>News</h2><a class="jump-top" href="#home">↑ top</a></div>
-      <ul class="news-list">
-        <li class="news-item"><span class="news-date">[Mon YYYY]</span><span class="news-text">[e.g. Paper on the γ‑process network accepted at [Journal].]</span></li>
-        <li class="news-item"><span class="news-date">[Mon YYYY]</span><span class="news-text">[e.g. Gave a talk on Bayesian level‑density UQ at [Conference/Workshop].]</span></li>
-        <li class="news-item"><span class="news-date">[Mon YYYY]</span><span class="news-text">[e.g. Started as [role] at [institution].]</span></li>
-      </ul>
-      <p class="muted" style="font-size:.85rem; margin-top:.8rem;">Keep this to short, dated one-liners. To add one, copy a line in the "news" array near the bottom of this file.</p>
+    <hr class="rule">
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <h3 class="section-title">Education</h3>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <span class="timeline-date">2016–2024</span>
+          <div class="timeline-body">
+            <h4>Ph.D., Experimental Nuclear Physics</h4>
+            <p class="timeline-place">The Maharaja Sayajirao University of Baroda</p>
+            <p class="timeline-detail">Thesis: <em>“Investigation of Neutron Induced Reaction Cross Sections for Nuclear Data Applications.”</em> Advisor: Prof. N. L. Singh.</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-date">2012–2014</span>
+          <div class="timeline-body">
+            <h4>M.Sc., Nuclear Physics</h4>
+            <p class="timeline-place">The Maharaja Sayajirao University of Baroda</p>
+            <p class="timeline-detail">Dissertation: <em>“Measurement of (n,2n) and (n,γ) Nuclear Reaction Cross-sections in Molybdenum.”</em> Advisor: Prof. S. K. Mukherjee.</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-date">2009–2012</span>
+          <div class="timeline-body">
+            <h4>B.Sc., Physics</h4>
+            <p class="timeline-place">The Maharaja Sayajirao University of Baroda</p>
+          </div>
+        </li>
+      </ol>
     </section>
 
-    <!-- ================= RESEARCH ================= -->
-    <section id="research" class="section-block">
-      <div class="section-head"><h2>Research interests</h2><a class="jump-top" href="#home">↑ top</a></div>
+    <hr class="rule">
 
-      <h3>Nucleosynthesis reaction networks</h3>
-      <ul class="card-list">
-        <li class="tone-teal">
-          <p class="entry-title">γ‑process nucleosynthesis <span class="tag">reaction networks</span></p>
-          <p class="entry-body">Photodisintegration‑driven network calculations for the proton‑rich p‑nuclei — tackling the numerical stiffness of single‑zone integration with damped Picard iteration and Structure‑of‑Arrays optimizations, and running WinNet and NuGrid ppn for benchmark comparisons.</p>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h3 class="section-title">Academic &amp; research experience</h3>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <span class="timeline-date">2021–present</span>
+          <div class="timeline-body">
+            <h4>Assistant Professor (Contractual)</h4>
+            <p class="timeline-place">Department of Physics, Faculty of Science, MSU Baroda</p>
+          </div>
         </li>
-        <li class="tone-violet">
-          <p class="entry-title">Reproducing published thermonuclear rates</p>
-          <p class="entry-body">Python implementations reproducing literature rate calculations — for example the <sup>26</sup>P(p,γ)<sup>27</sup>S and <sup>42</sup>Ti(p,γ)<sup>43</sup>V rates — including a corrected reverse‑rate formula and a lightweight one‑zone driver for sanity checks against full network codes.</p>
+        <li class="timeline-item">
+          <span class="timeline-date">2016–2019</span>
+          <div class="timeline-body">
+            <h4>Junior Research Fellow</h4>
+            <p class="timeline-place">Inter University Accelerator Centre (IUAC), New Delhi &amp; MSU Baroda</p>
+            <p class="timeline-detail">Project: <em>“Study of Heavy Ion Induced Fusion/Fission Reactions around Coulomb Barrier”</em> (IUAC&#8209;UGC/XIII.7/UFR&#8209;60321).</p>
+          </div>
         </li>
-        <li class="tone-teal">
-          <p class="entry-title">s‑process and r‑process nucleosynthesis</p>
-          <p class="entry-body">Broader interest in slow and rapid neutron‑capture nucleosynthesis and how reaction‑rate uncertainties propagate into predicted isotopic abundance patterns.</p>
+        <li class="timeline-item">
+          <span class="timeline-date">2015–2016</span>
+          <div class="timeline-body">
+            <h4>Temporary Teaching Assistant</h4>
+            <p class="timeline-place">Department of Physics, Faculty of Science, MSU Baroda</p>
+          </div>
         </li>
-      </ul>
-
-      <h3>Nuclear structure inputs</h3>
-      <ul class="card-list">
-        <li class="tone-violet">
-          <p class="entry-title">Nuclear level density modelling</p>
-          <p class="entry-body">Back‑Shifted Fermi Gas, Constant Temperature, and Generalised Superfluid model descriptions of the nuclear level density, and how well they extrapolate beyond the discrete‑level region.</p>
-        </li>
-        <li class="tone-teal">
-          <p class="entry-title">Bayesian uncertainty quantification</p>
-          <p class="entry-body">MCMC‑based (emcee) uncertainty quantification for level‑density model parameters — reproducing and auditing published fits (including for <sup>105</sup>Pd, <sup>106</sup>Pd, <sup>105</sup>Cd, <sup>106</sup>Cd, <sup>127</sup>Te, and <sup>147</sup>Nd).</p>
-        </li>
-        <li class="tone-violet">
-          <p class="entry-title">Statistical (Hauser–Feshbach) reaction theory</p>
-          <p class="entry-body">Combining level density, γ‑ray strength function (SLO/GLO/EGLO), and optical‑potential inputs into cross‑section and astrophysical rate calculators, with Total Monte Carlo propagation of input uncertainties to the final rate.</p>
-          <p class="entry-body">$$\sigma_{ab}(E) \propto \sum_{J,\pi} (2J+1)\,\frac{T_a(E,J,\pi)\,T_b(E,J,\pi)}{T_{\text{tot}}(E,J,\pi)}$$</p>
-        </li>
-      </ul>
-
-      <h3>Computational tools</h3>
-      <p>Day‑to‑day work draws on <strong>TALYS</strong>, <strong>MESA</strong>, <strong>REACLIB</strong>, <strong>WinNet</strong>, and <strong>NuGrid ppn</strong> for nuclear‑astrophysics modelling, alongside a Python stack (<strong>emcee</strong>, <strong>scipy</strong> ODE solvers, custom Structure‑of‑Arrays network integrators) for method development and rapid prototyping.</p>
-
-      <blockquote class="callout">
-        <p>Looking for a student project in one of these areas? Jump to <a href="#projects">project ideas</a> — most are scoped to be tractable in a semester with an existing codebase to build from.</p>
-      </blockquote>
+      </ol>
     </section>
 
-    <!-- ================= PUBLICATIONS (data-driven — see the "publications" array near the bottom) ================= -->
-    <section id="publications" class="section-block">
-      <div class="section-head"><h2>Publications</h2><a class="jump-top" href="#home">↑ top</a></div>
-      <p class="muted">Full text via <a href="#">Google Scholar</a> and <a href="#">ORCID</a>.</p>
-      <div id="publications-list"><!-- rendered by JS from the "publications" array below --></div>
-      <blockquote class="callout">
-        <p><strong>To add a publication:</strong> scroll to the <code>publications</code> array near the bottom of this file and copy one entry — no other HTML editing needed. Put the PDF itself in the <code>publications/</code> folder and point the entry's <code>PDF</code> link at it; DOI and arXiv links can stay as external URLs. Each entry also supports a collapsible abstract and a one-click "Copy citation" button.</p>
-      </blockquote>
-    </section>
+    <hr class="rule">
 
-    <!-- ================= TEACHING ================= -->
-    <section id="teaching" class="section-block">
-      <div class="section-head"><h2>Teaching</h2><a class="jump-top" href="#home">↑ top</a></div>
-
-      <h3>Courses</h3>
-      <table>
-        <thead><tr><th>Course</th><th>Role</th><th>Term</th><th>Materials</th></tr></thead>
+    <!-- TEACHING -->
+    <section id="teaching" class="section">
+      <h3 class="section-title">Teaching</h3>
+      <p class="section-intro">Current courses at MSU Baroda:</p>
+      <table class="course-table" id="courseTable">
+        <thead>
+          <tr><th>Code</th><th>Course</th></tr>
+        </thead>
+        <tbody id="courseTableBody"></tbody>
+      </table>
+      <p class="section-intro" style="margin-top:2rem;">Previously taught (2015–2016), as Temporary Teaching Assistant:</p>
+      <table class="course-table">
+        <thead><tr><th>Code</th><th>Course</th></tr></thead>
         <tbody>
-          <tr><td>[Course name, e.g. Nuclear &amp; Particle Physics]</td><td>[Instructor / TA]</td><td>[Spring 2026]</td><td><a href="teaching/[course]-syllabus.pdf">Syllabus ↗</a></td></tr>
-          <tr><td>[Course name, e.g. Computational Methods in Physics]</td><td>[Instructor / TA]</td><td>[Fall 2025]</td><td><a href="teaching/[course]-syllabus.pdf">Syllabus ↗</a></td></tr>
-          <tr><td>[Course name]</td><td>[Role]</td><td>[Term]</td><td><a href="teaching/[course]-syllabus.pdf">Syllabus ↗</a></td></tr>
+          <tr><td>PHM2002C</td><td>Heat and Thermodynamics</td></tr>
+          <tr><td>PHE2002C</td><td>Electromagnetic Fields</td></tr>
+          <tr><td>PHY1301ET</td><td>Optics and Lasers</td></tr>
+          <tr><td>PHY1501EL</td><td>Physics Laboratory Experiments</td></tr>
         </tbody>
       </table>
-      <p class="muted" style="font-size:.85rem;">Put each syllabus, slide deck, or handout in the <code>teaching/</code> folder and link it from this table.</p>
-
-      <h3>Office hours</h3>
-      <p>[Day/time], [location or video‑call link]. Also happy to schedule by <a href="#contact">email</a>.</p>
-
-      <h3>Guest lectures &amp; workshops</h3>
-      <ul class="card-list">
-        <li class="tone-teal">
-          <p class="entry-title">[Talk / workshop title]</p>
-          <p class="entry-meta">[Audience / course / event], [date]</p>
-          <p class="entry-body">[One line on what it covered.]</p>
-          <p><a href="teaching/[talk-slides].pdf">Slides ↗</a></p>
-        </li>
-      </ul>
     </section>
 
-    <!-- ================= STUDY MATERIAL (data-driven — see the "studyMaterials" array near the bottom) ================= -->
-    <section id="study" class="section-block">
-      <div class="section-head"><h2>Study material</h2><a class="jump-top" href="#home">↑ top</a></div>
-      <p class="muted">Notes, problem sets, and self‑contained interactive tools, grouped by topic.</p>
-      <div id="study-material-list"><!-- rendered by JS from the "studyMaterials" array below --></div>
-      <blockquote class="callout">
-        <p><strong>To add material in future:</strong> scroll to the <code>studyMaterials</code> array near the bottom of this file and copy one entry (title, category, description, link) — the page rebuilds the grouped list automatically, no HTML editing needed. Put the actual file in the <code>study-material/</code> folder and point the entry's link at it, e.g. <code>study-material/nld-calculator.html</code>.</p>
-      </blockquote>
+    <hr class="rule">
+
+    <!-- STUDY MATERIAL -->
+    <section id="study-material" class="section">
+      <h3 class="section-title">Study material</h3>
+      <p class="section-intro">Course-wise notes, problem sets and lab manuals will be published here as PDFs. Placeholders are shown below — replace each with a real link once a file is uploaded.</p>
+      <div class="material-grid" id="materialGrid"></div>
     </section>
 
-    <!-- ================= PROJECTS ================= -->
-    <section id="projects" class="section-block">
-      <div class="section-head"><h2>Project ideas</h2><a class="jump-top" href="#home">↑ top</a></div>
-      <p class="muted">Open project and thesis ideas for students, scoped from a semester to a full thesis.</p>
+    <hr class="rule">
 
-      <h3>Nucleosynthesis &amp; reaction networks</h3>
-      <ul class="card-list">
-        <li class="tone-teal">
-          <p class="entry-title">Sensitivity study of the γ‑process network to individual rate uncertainties</p>
-          <p class="entry-body">Vary one reaction rate at a time (or in correlated groups) through the existing network solver and rank which rates most affect final p‑nuclei abundances.</p>
-          <p class="entry-meta">Scope: one semester · Skills: Python, ODE integration</p>
-        </li>
-        <li class="tone-violet">
-          <p class="entry-title">Benchmarking a one‑zone solver against WinNet / NuGrid ppn</p>
-          <p class="entry-body">Run a small reaction network through the custom Picard‑iteration solver and through WinNet or ppn, and characterise where and why the results diverge.</p>
-          <p class="entry-meta">Scope: one semester · Skills: Fortran/Python, numerical methods</p>
-        </li>
-      </ul>
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="section">
+      <h3 class="section-title">Publications</h3>
 
-      <h3>Nuclear structure &amp; statistical models</h3>
-      <ul class="card-list">
-        <li class="tone-teal">
-          <p class="entry-title">Extending Bayesian UQ from level densities to combined NLD + GSF fits</p>
-          <p class="entry-body">Extend the existing emcee‑based level‑density UQ pipeline to jointly fit level density and γ‑ray strength function parameters, and compare posterior correlations.</p>
-          <p class="entry-meta">Scope: full thesis · Skills: Python, emcee/MCMC, Bayesian statistics</p>
-        </li>
-        <li class="tone-violet">
-          <p class="entry-title">Model comparison for nuclear level density near shell closures</p>
-          <p class="entry-body">Compare BSFG, CT, and GSM fits for nuclei near a shell closure using Bayes factors or information criteria rather than chi‑square alone.</p>
-          <p class="entry-meta">Scope: one semester · Skills: Python, statistics</p>
-        </li>
-        <li class="tone-teal">
-          <p class="entry-title">Total Monte Carlo uncertainty propagation for a Hauser–Feshbach rate calculator</p>
-          <p class="entry-body">Wire the existing NLD + GSF + optical‑potential calculator into a Total Monte Carlo loop that propagates input‑model uncertainty to a final rate with a confidence band.</p>
-          <p class="entry-meta">Scope: one semester · Skills: Python, statistics, reaction theory</p>
-        </li>
-      </ul>
+      <div class="pub-tabs" role="tablist" aria-label="Publication type">
+        <button class="pub-tab active" data-target="pub-journal" role="tab" aria-selected="true">Journal articles <span class="pub-count">30</span></button>
+        <button class="pub-tab" data-target="pub-conf" role="tab" aria-selected="false">Conference proceedings <span class="pub-count">16</span></button>
+      </div>
 
-      <h3>Tools &amp; outreach</h3>
-      <ul class="card-list">
-        <li class="tone-violet">
-          <p class="entry-title">Public γ‑ray strength function repository web app</p>
-          <p class="entry-body">Turn a local GSF dataset into a small searchable web application with interactive SLO/GLO/EGLO model overlays.</p>
-          <p class="entry-meta">Scope: one semester · Skills: web development, nuclear data formats</p>
-        </li>
-        <li class="tone-teal">
-          <p class="entry-title">Interactive teaching module: from nuclear inputs to stellar abundances</p>
-          <p class="entry-body">A guided page that lets a student change a level‑density or rate parameter and see the effect ripple through to a final abundance pattern.</p>
-          <p class="entry-meta">Scope: one semester · Skills: HTML/JS/canvas, physics communication</p>
-        </li>
-      </ul>
+      <ol class="pub-list" id="pub-journal"></ol>
+      <ol class="pub-list" id="pub-conf" hidden></ol>
 
-      <blockquote class="callout">
-        <p>These are starting points, not fixed assignments — if you have your own idea adjacent to reaction rates, nucleosynthesis, or nuclear structure modelling, <a href="#contact">get in touch</a> and we can scope something together.</p>
-      </blockquote>
+      <h4 class="sub-title">Poster presentations</h4>
+      <ol class="pub-list" id="pub-poster"></ol>
     </section>
 
-    <!-- ================= CONTACT ================= -->
-    <section id="contact" class="section-block">
-      <div class="section-head"><h2>Contact</h2><a class="jump-top" href="#home">↑ top</a></div>
-      <p>The fastest way to reach me is <a href="mailto:your.email@university.edu">email</a>. Full contact details and links are always visible on the left.</p>
-      <p class="muted">[Add office location / mailing address here if you'd like it public.]</p>
+    <hr class="rule">
+
+    <!-- PROJECT IDEAS -->
+    <section id="projects" class="section">
+      <h3 class="section-title">Project ideas</h3>
+      <p class="section-intro">Directions I would like to pursue with students or as part of a postdoctoral collaboration — reach out on <a href="#contact">email</a> if any of these overlap with your interests.</p>
+      <div class="project-grid" id="projectGrid"></div>
     </section>
 
-    <footer class="site-footer">
-      <p>© <span id="year">2026</span> Ratan. Built as a static site — edit freely, no build step required.</p>
+    <hr class="rule">
+
+    <!-- ACTIVITY / AWARDS / SKILLS -->
+    <section id="activity" class="section">
+      <h3 class="section-title">Activity &amp; awards</h3>
+
+      <h4 class="sub-title">Awards</h4>
+      <ul class="plain-list">
+        <li><span class="tag-date">Dec 2018</span> Gujarat SET (GSET) — qualified for Assistant Professor, Physical Science.</li>
+        <li><span class="tag-date">May 2014</span> Late Dr. Jatush Vipinchandra Sheth Gold Medal, 1st rank, M.Sc. Nuclear Physics, MSU Baroda.</li>
+      </ul>
+
+      <h4 class="sub-title">Technical skills</h4>
+      <ul class="chip-list">
+        <li>HPGe detector</li><li>Si surface barrier detector</li><li>MWPC gas detector</li>
+        <li>NaI(Tl) scintillation detector</li><li>GM counter</li><li>Alpha spectrometer</li>
+        <li>Nuclear electronics setup</li><li>SRIM / TRIM</li><li>LISE++</li><li>NRV (JINR)</li>
+        <li>Target fabrication (pelletizer &amp; rolling mill)</li><li>Vacuum systems</li>
+      </ul>
+
+      <h4 class="sub-title">Computational</h4>
+      <ul class="chip-list">
+        <li>AZURE (R-matrix)</li><li>WINNET network</li><li>TALYS</li><li>EMPIRE</li>
+        <li>ALICE</li><li>FRESCO</li><li>CCFULL</li><li>PHITS (Monte Carlo)</li>
+        <li>Python / ML</li><li>ROOT</li><li>Mathematica</li><li>Origin</li>
+        <li>LAMPS (BARC&#8209;TIFR)</li><li>LaTeX</li>
+      </ul>
+
+      <h4 class="sub-title">Certificates</h4>
+      <ul class="plain-list">
+        <li>Focus on Peer Review — Nature Masterclasses.</li>
+        <li>IOP Peer Review Excellence.</li>
+      </ul>
+
+      <h4 class="sub-title">Students guided</h4>
+      <ul class="plain-list">
+        <li>3 postgraduate students — six-month master's thesis projects.</li>
+        <li>7 undergraduate students — two-month summer internships.</li>
+      </ul>
+
+      <h4 class="sub-title">Professional memberships</h4>
+      <ul class="plain-list">
+        <li>Physical Society, The Maharaja Sayajirao University of Baroda.</li>
+        <li>Indian Association of Physics Teachers (IAPT), India.</li>
+      </ul>
+
+      <h4 class="sub-title">Other activities</h4>
+      <ul class="plain-list">
+        <li>No. 1 Guj Air Sqn NCC Cadet (10/58425), Vadodara.</li>
+        <li>Academic admission committee member, undergraduate admissions, Faculty of Science, MSU Baroda.</li>
+        <li>Appointed examiner for university examinations, Parul University, Vadodara.</li>
+        <li>Coordinator, astronomical telescope programme, Department of Physics, MSU Baroda.</li>
+      </ul>
+
+      <h4 class="sub-title">Schools, conferences &amp; workshops</h4>
+      <div class="conf-list" id="confList"></div>
+    </section>
+
+    <hr class="rule">
+
+    <footer class="site-footer" id="contact-footer">
+      <p>Dr. Ratan Kumar Singh · Department of Physics, MSU Baroda · <a href="mailto:ratankumar339@gmail.com">ratankumar339@gmail.com</a> · <a href="https://orcid.org/0000-0003-1711-2319" target="_blank" rel="noopener">ORCID 0000&#8209;0003&#8209;1711&#8209;2319</a></p>
+      <p class="footer-updated">Page last updated 9 September 2026.</p>
     </footer>
+
   </main>
 </div>
 
-<a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
-
-<script>
-/* =========================================================================
-   CONTENT DATA
-   Add new publications or study material here — the sections above render
-   automatically from these two arrays. No other HTML editing needed.
-   ========================================================================= */
-
-var publications = [
-  {
-    year: 2026, tone: "teal", tag: "Journal",
-    title: "[Paper title]",
-    authors: "[Author list, with your name]",
-    venue: "[Journal name]", details: "[volume/pages]",
-    summary: "[One or two sentences on what the paper shows and why it matters.]",
-    abstract: "[Paste the paper's abstract here, or leave collapsed if you'd rather not.]",
-    links: [{ label: "DOI", url: "#" }, { label: "PDF", url: "publications/[filename].pdf" }, { label: "arXiv", url: "#" }]
-  },
-  {
-    year: 2025, tone: "violet", tag: "Preprint",
-    title: "[Paper title]",
-    authors: "[Author list]",
-    venue: "[Venue / arXiv ID]", details: "",
-    summary: "[Summary.]",
-    abstract: "[Abstract text.]",
-    links: [{ label: "arXiv", url: "#" }]
-  },
-  {
-    year: 2025, tone: "teal", tag: "Proceedings",
-    title: "[Conference proceedings title]",
-    authors: "[Author list]",
-    venue: "[Conference name]", details: "[location]",
-    summary: "[Summary.]",
-    abstract: "",
-    links: [{ label: "PDF", url: "publications/[filename].pdf" }]
-  }
-];
-
-var studyMaterials = [
-  { category: "Nuclear structure & reactions", tone: "teal", title: "Nuclear level density models",
-    body: "Notes and an interactive calculator covering Back‑Shifted Fermi Gas, Constant Temperature, and Generalised Superfluid descriptions.",
-    links: [{ label: "Open tool", url: "study-material/nld-calculator.html" }, { label: "Lecture notes (PDF)", url: "study-material/nld-notes.pdf" }] },
-  { category: "Nuclear structure & reactions", tone: "violet", title: "Hauser–Feshbach cross‑section calculator",
-    body: "Level density + γ‑ray strength function + optical potential combined into a working (p,γ)/(p,2n) cross‑section tool, with Monte Carlo uncertainty propagation.",
-    links: [{ label: "Open tool", url: "study-material/hauser-feshbach.html" }] },
-  { category: "Nuclear structure & reactions", tone: "teal", title: "Nuclear structure explorer",
-    body: "Spin‑parity, resonance energy, spectroscopic factor, particle/γ widths, and resonance strength, with an editable level‑diagram for several preset reaction systems.",
-    links: [{ label: "Open tool", url: "study-material/nuclear-structure-explorer.html" }] },
-  { category: "Nucleosynthesis & astrophysics", tone: "violet", title: "γ‑process network visualizer",
-    body: "A reaction‑network solver with a Picard‑iteration integrator, visualised so students can watch abundances evolve across a photodisintegration chain.",
-    links: [{ label: "Open tool", url: "study-material/gamma-process-visualizer.html" }] },
-  { category: "Nucleosynthesis & astrophysics", tone: "teal", title: "Stellar explorer",
-    body: "Blackbody spectra and Wien's law, OBAFGKM spectral classification, the HR diagram, and evolutionary tracks by stellar mass — in one interactive page.",
-    links: [{ label: "Open tool", url: "study-material/stellar-explorer.html" }] },
-  { category: "Problem sets & notes", tone: "teal", title: "[Course or topic name]",
-    body: "[Short description of what's in the set.]",
-    links: [{ label: "Download (PDF)", url: "study-material/[filename].pdf" }] }
-];
-
-/* =========================================================================
-   RENDERING — no need to edit below this line
-   ========================================================================= */
-function escapeHtml(s) { return (s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
-
-function renderPublications() {
-  var container = document.getElementById('publications-list');
-  if (!container) return;
-  var byYear = {};
-  var years = [];
-  publications.forEach(function (p) {
-    if (!byYear[p.year]) { byYear[p.year] = []; years.push(p.year); }
-    byYear[p.year].push(p);
-  });
-  years.sort(function (a, b) { return b - a; });
-
-  var html = '';
-  years.forEach(function (y) {
-    html += '<p class="year-divider">' + y + '</p><ul class="card-list">';
-    byYear[y].forEach(function (p) {
-      var meta = '<span class="tag">' + escapeHtml(p.tag) + '</span> ' + escapeHtml(p.authors) +
-                 ' — <em>' + escapeHtml(p.venue) + '</em>' + (p.details ? ', ' + escapeHtml(p.details) : '') + ' (' + p.year + ')';
-      var citation = p.authors + '. ' + p.title + '. ' + p.venue + (p.details ? ', ' + p.details : '') + ' (' + p.year + ').';
-      var actions = (p.links || []).map(function (l) { return '<a href="' + l.url + '">' + escapeHtml(l.label) + '</a>'; }).join('');
-      actions += '<button class="pub-link" data-citation="' + escapeHtml(citation) + '">Copy citation</button>';
-      html += '<li class="tone-' + p.tone + '">' +
-        '<p class="entry-title">' + escapeHtml(p.title) + '</p>' +
-        '<p class="entry-meta">' + meta + '</p>' +
-        (p.summary ? '<p class="entry-body">' + escapeHtml(p.summary) + '</p>' : '') +
-        (p.abstract ? '<details class="abstract"><summary>Abstract</summary><p>' + escapeHtml(p.abstract) + '</p></details>' : '') +
-        '<div class="pub-actions">' + actions + '</div>' +
-        '</li>';
-    });
-    html += '</ul>';
-  });
-  container.innerHTML = html;
-}
-
-function renderStudyMaterials() {
-  var container = document.getElementById('study-material-list');
-  if (!container) return;
-  var groups = {};
-  var order = [];
-  studyMaterials.forEach(function (item) {
-    if (!groups[item.category]) { groups[item.category] = []; order.push(item.category); }
-    groups[item.category].push(item);
-  });
-  var html = '';
-  order.forEach(function (cat) {
-    html += '<h3>' + escapeHtml(cat) + '</h3><ul class="card-list">';
-    groups[cat].forEach(function (item) {
-      var links = (item.links || []).map(function (l) { return '<a href="' + l.url + '">' + escapeHtml(l.label) + ' ↗</a>'; }).join(' &nbsp;·&nbsp; ');
-      html += '<li class="tone-' + (item.tone || 'teal') + '">' +
-        '<p class="entry-title">' + escapeHtml(item.title) + '</p>' +
-        '<p class="entry-body">' + escapeHtml(item.body) + '</p>' +
-        (links ? '<p>' + links + '</p>' : '') +
-        '</li>';
-    });
-    html += '</ul>';
-  });
-  container.innerHTML = html;
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  renderPublications();
-  renderStudyMaterials();
-
-  // ---- mobile nav toggle ----
-  var toggle = document.querySelector('.nav-toggle');
-  var mobileNav = document.querySelector('.mobile-nav');
-  if (toggle && mobileNav) {
-    toggle.addEventListener('click', function () {
-      var isOpen = mobileNav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      toggle.textContent = isOpen ? 'Close' : 'Menu';
-    });
-    mobileNav.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') {
-        mobileNav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.textContent = 'Menu';
-      }
-    });
-  }
-
-  // ---- scroll-spy active nav link (desktop topnav + mobile nav) ----
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.topnav-links a, .mobile-nav a'));
-  var sections = navLinks.map(function (link) { return document.querySelector(link.getAttribute('href')); }).filter(Boolean);
-  function setActive(id) {
-    navLinks.forEach(function (link) { link.classList.toggle('active', link.getAttribute('href') === '#' + id); });
-  }
-  if ('IntersectionObserver' in window && sections.length) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) { if (entry.isIntersecting) setActive(entry.target.id); });
-    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
-    sections.forEach(function (s) { observer.observe(s); });
-  }
-
-  // ---- back-to-top ----
-  var backToTop = document.querySelector('.back-to-top');
-  if (backToTop) {
-    window.addEventListener('scroll', function () { backToTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });
-  }
-
-  // ---- theme toggle (persisted) ----
-  var root = document.documentElement;
-  document.querySelectorAll('.theme-toggle').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-      var next = current === 'light' ? 'dark' : 'light';
-      if (next === 'dark') { root.removeAttribute('data-theme'); } else { root.setAttribute('data-theme', 'light'); }
-      localStorage.setItem('theme', next);
-    });
-  });
-
-  // ---- copy citation ----
-  document.body.addEventListener('click', function (e) {
-    var btn = e.target.closest && e.target.closest('.pub-link[data-citation]');
-    if (!btn) return;
-    var text = btn.getAttribute('data-citation');
-    var done = function () {
-      var original = btn.textContent;
-      btn.textContent = 'Copied!';
-      btn.classList.add('copied');
-      setTimeout(function () { btn.textContent = original; btn.classList.remove('copied'); }, 1800);
-    };
-    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(done).catch(function () {}); }
-  });
-});
-
-// theme: apply stored/system preference (kept here for simplicity; see README for a no-flash version)
-(function () {
-  var stored = localStorage.getItem('theme');
-  var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-  if (stored === 'light' || (!stored && prefersLight)) { document.documentElement.setAttribute('data-theme', 'light'); }
-})();
-</script>
+<script src="script.js"></script>
 </body>
 </html>
