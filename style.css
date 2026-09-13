@@ -24,7 +24,7 @@
   --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   --sidebar-w: 300px;
-  --content-max: 720px;
+  --content-max: 1100px;
 }
 
 * { box-sizing: border-box; }
@@ -324,7 +324,7 @@ hr.rule {
 /* ---- research interest cards ---- */
 .interest-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.1rem;
 }
 .interest-card {
@@ -346,7 +346,7 @@ hr.rule {
 }
 
 /* ---- timeline (education / experience) ---- */
-.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline { list-style: none; margin: 0; padding: 0; max-width: 78ch; }
 .timeline-item {
   display: grid;
   grid-template-columns: 7.5rem 1fr;
@@ -368,6 +368,7 @@ hr.rule {
 /* ---- teaching table ---- */
 .course-table {
   width: 100%;
+  max-width: 640px;
   border-collapse: collapse;
   font-size: 0.9rem;
 }
@@ -395,7 +396,7 @@ hr.rule {
 /* ---- study material cards ---- */
 .material-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.1rem;
 }
 .material-card {
@@ -439,7 +440,7 @@ hr.rule {
 }
 .pub-tab.active .pub-count { color: var(--amber); }
 
-.pub-list { list-style: none; margin: 0 0 1rem; padding: 0; counter-reset: pub; }
+.pub-list { list-style: none; margin: 0 0 1rem; padding: 0; counter-reset: pub; max-width: 78ch; }
 .pub-item {
   counter-increment: pub;
   padding: 1rem 0 1rem 2.1rem;
@@ -466,7 +467,7 @@ hr.rule {
 /* ---- project idea cards ---- */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.1rem;
 }
 .project-card {
@@ -484,7 +485,7 @@ hr.rule {
 .project-card p { margin: 0; font-size: 0.88rem; line-height: 1.6; color: var(--muted-on-navy); }
 
 /* ---- activity / awards ---- */
-.plain-list { list-style: none; margin: 0 0 0.5rem; padding: 0; }
+.plain-list { list-style: none; margin: 0 0 0.5rem; padding: 0; max-width: 78ch; }
 .plain-list li {
   padding: 0.55rem 0;
   border-top: 1px solid var(--rule);
@@ -516,7 +517,7 @@ hr.rule {
   color: var(--ink);
 }
 
-.conf-list { display: flex; flex-direction: column; }
+.conf-list { display: flex; flex-direction: column; max-width: 80ch; }
 .conf-row {
   display: grid;
   grid-template-columns: 6rem 1fr;
@@ -562,12 +563,6 @@ hr.rule {
 /* =====================================================================
    Responsive
    ===================================================================== */
-@media (max-width: 980px) {
-  .interest-grid,
-  .material-grid,
-  .project-grid { grid-template-columns: 1fr; }
-}
-
 @media (max-width: 860px) {
   .nav-toggle { display: flex; }
 
