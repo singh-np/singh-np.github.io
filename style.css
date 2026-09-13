@@ -1,27 +1,27 @@
 /* =====================================================================
-   Design tokens
-   Palette grounded in the subject matter: deep instrument-panel navy
-   for the sidebar, a cool laboratory paper for reading, a Cherenkov-glow
-   cyan as the live accent, and a decay-amber for numbers and dates.
+   Design tokens — "Reaction Ledger"
+   A lab-logbook palette: warm ledger paper, an espresso specimen
+   panel, and two accents drawn from the physical materials of
+   cross-section work — oxidised copper foil (the interactive accent)
+   and patinated foil green (the data/temporal accent).
    ===================================================================== */
 :root {
-  --navy: #0E1B2C;
-  --navy-2: #16283D;
-  --navy-3: #21374F;
-  --paper: #F1F3F0;
-  --paper-dim: #E4E9E3;
-  --card: #FBFBF9;
-  --ink: #17242E;
-  --muted: #5B6B66;
-  --muted-on-navy: #93A4B3;
-  --cyan: #3F9DA6;
-  --cyan-strong: #2C7D85;
-  --amber: #C68A3B;
-  --rule: #C9CFC7;
-  --rule-on-navy: #2B3E52;
+  --ink: #221D17;
+  --paper: #F3EEE1;
+  --paper-dim: #E9E1CC;
+  --card: #FBF8EF;
+  --panel: #1B160F;
+  --panel-2: #241D14;
+  --muted: #79705D;
+  --muted-on-panel: #B6A98D;
+  --copper: #B0552A;
+  --copper-deep: #8C4220;
+  --patina: #4C7466;
+  --rule: #D9CFB6;
+  --rule-panel: #3A3122;
 
-  --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-  --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   --sidebar-w: 300px;
   --content-max: 1100px;
@@ -33,17 +33,17 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--display);
   color: var(--ink);
   background: var(--paper);
   -webkit-font-smoothing: antialiased;
 }
 
-a { color: var(--cyan-strong); text-decoration-thickness: 1px; text-underline-offset: 2px; }
-a:hover { color: var(--amber); }
+a { color: var(--copper-deep); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--patina); }
 
 :focus-visible {
-  outline: 2px solid var(--cyan);
+  outline: 2px solid var(--copper);
   outline-offset: 2px;
 }
 
@@ -56,16 +56,17 @@ a:hover { color: var(--amber); }
 }
 
 /* ---------------------------------------------------------------------
-   Sidebar (left) — photo + identity + contact, per the brief
+   Sidebar (left) — specimen card: photo, identity, contact
    --------------------------------------------------------------------- */
 .sidebar {
   position: fixed;
   top: 0; left: 0; bottom: 0;
   width: var(--sidebar-w);
-  background: var(--navy);
-  color: #E9EEF1;
+  background: var(--panel);
+  color: #EFE7D6;
   overflow-y: auto;
   z-index: 20;
+  border-right: 1px solid var(--rule-panel);
 }
 
 .sidebar-inner {
@@ -75,9 +76,8 @@ a:hover { color: var(--amber); }
   align-items: flex-start;
 }
 
-/* portrait placeholder — hex frame with an orbit motif, since no photo
-   file was supplied; swap the <svg> block in index.html for a real
-   <img> once one is available (see note in chat). */
+/* portrait — a specimen disc: circular photo ringed by two thin
+   concentric lines, like a labelled foil sample under glass. */
 .portrait {
   width: 128px;
   height: 128px;
@@ -90,36 +90,39 @@ a:hover { color: var(--amber); }
   width: 100%;
   height: 100%;
 }
-.orbit { fill: none; stroke: var(--rule-on-navy); stroke-width: 1; }
+.orbit { fill: none; stroke: var(--rule-panel); stroke-width: 1; }
 .orbit-2 { stroke-dasharray: 2 4; }
-.electron { fill: var(--cyan); }
+.electron { fill: var(--copper); }
 .portrait-photo {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  inset: 6%;
+  width: 88%;
+  height: 88%;
   object-fit: cover;
-  clip-path: polygon(50% 10%, 82.5% 29%, 82.5% 71%, 50% 90%, 17.5% 71%, 17.5% 29%);
+  border-radius: 50%;
+  clip-path: circle(50% at 50% 50%);
+  box-shadow: 0 0 0 1px var(--copper);
 }
 
 .name {
-  font-size: 1.5rem;
+  font-family: var(--display);
+  font-size: 1.55rem;
   font-weight: 600;
   line-height: 1.25;
   margin: 0 0 0.3rem;
-  color: #fff;
+  color: #F7F1E4;
 }
 .role {
   font-family: var(--mono);
   font-size: 0.78rem;
-  color: var(--cyan);
+  color: var(--copper);
   margin: 0 0 0.9rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 .dept {
   font-size: 0.88rem;
   line-height: 1.55;
-  color: var(--muted-on-navy);
+  color: var(--muted-on-panel);
   margin: 0 0 1.75rem;
 }
 
@@ -133,7 +136,7 @@ a:hover { color: var(--amber); }
 .quicklinks a {
   font-family: var(--mono);
   font-size: 0.82rem;
-  color: #D7DEE2;
+  color: #D6CBAF;
   text-decoration: none;
   border-left: 2px solid transparent;
   padding-left: 0.7rem;
@@ -141,22 +144,22 @@ a:hover { color: var(--amber); }
 }
 .quicklinks a:hover,
 .quicklinks a:focus-visible {
-  border-left-color: var(--cyan);
-  color: var(--cyan);
+  border-left-color: var(--copper);
+  color: var(--copper);
 }
 
 .sidebar-divider {
   width: 100%;
   height: 1px;
-  background: var(--rule-on-navy);
+  background: var(--rule-panel);
   margin: 0 0 1.5rem;
 }
 
 .contact-label {
   font-family: var(--mono);
   font-size: 0.72rem;
-  color: var(--muted-on-navy);
-  letter-spacing: 0.04em;
+  color: var(--muted-on-panel);
+  letter-spacing: 0.02em;
   margin: 0 0 0.9rem;
 }
 .contact-list { list-style: none; margin: 0; padding: 0; width: 100%; }
@@ -171,15 +174,15 @@ a:hover { color: var(--amber); }
 .contact-list li:last-child { border-bottom: none; }
 .contact-list .k {
   font-family: var(--mono);
-  color: var(--muted-on-navy);
+  color: var(--muted-on-panel);
   min-width: 4.6rem;
   flex-shrink: 0;
   font-size: 0.72rem;
   padding-top: 0.15rem;
 }
-.contact-list .v { color: #E9EEF1; word-break: break-word; }
-.contact-list .v a { color: #BFE3E6; }
-.contact-list .v a:hover { color: var(--amber); }
+.contact-list .v { color: #F1E9D9; word-break: break-word; }
+.contact-list .v a { color: #E3B486; }
+.contact-list .v a:hover { color: var(--patina); }
 
 /* ---------------------------------------------------------------------
    Main content
@@ -199,20 +202,21 @@ a:hover { color: var(--amber); }
 .eyebrow-plain {
   font-family: var(--mono);
   font-size: 0.8rem;
-  color: var(--cyan-strong);
+  color: var(--patina);
   margin: 0 0 0.9rem;
 }
 
 .hero-title {
-  font-size: clamp(1.7rem, 2.4vw + 1rem, 2.4rem);
-  line-height: 1.28;
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 2.4vw + 1rem, 2.6rem);
+  line-height: 1.25;
   font-weight: 600;
   margin: 0 0 1.1rem;
-  max-width: 22ch;
+  max-width: 24ch;
 }
 
 .hero-lede {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   line-height: 1.7;
   color: var(--ink);
   max-width: 62ch;
@@ -229,7 +233,7 @@ a:hover { color: var(--amber); }
   font-family: var(--mono);
   font-size: 1.6rem;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--copper);
 }
 .stat-label {
   font-size: 0.8rem;
@@ -240,6 +244,7 @@ a:hover { color: var(--amber); }
 hr.rule {
   border: none;
   border-top: 1px solid var(--rule);
+  box-shadow: 0 3px 0 -2px var(--rule);
   max-width: var(--content-max);
   margin: 3.2rem 0;
 }
@@ -270,10 +275,10 @@ hr.rule {
   white-space: nowrap;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
-.top-tab:hover { color: var(--navy); }
+.top-tab:hover { color: var(--ink); }
 .top-tab.active {
-  color: var(--navy);
-  border-bottom-color: var(--cyan);
+  color: var(--ink);
+  border-bottom-color: var(--copper);
 }
 
 .contact-list--main {
@@ -290,10 +295,10 @@ hr.rule {
   color: var(--ink);
 }
 .contact-list--main .v a {
-  color: var(--cyan-strong);
+  color: var(--copper-deep);
 }
 .contact-list--main .v a:hover {
-  color: var(--amber);
+  color: var(--patina);
 }
 
 .panels { max-width: var(--content-max); }
@@ -302,15 +307,21 @@ hr.rule {
 .page-section.active { display: block; }
 
 .section-title {
-  font-size: 1.45rem;
+  font-family: var(--display);
+  font-size: 1.5rem;
   font-weight: 600;
   margin: 0 0 1.4rem;
-  color: var(--navy);
+  padding-bottom: 0.6rem;
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+  box-shadow: 0 3px 0 -2px var(--rule);
+  display: inline-block;
 }
 .sub-title {
-  font-size: 1.05rem;
+  font-family: var(--display);
+  font-size: 1.08rem;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--ink);
   margin: 2rem 0 0.9rem;
 }
 .section-intro {
@@ -321,7 +332,7 @@ hr.rule {
   max-width: 62ch;
 }
 
-/* ---- research interest cards ---- */
+/* ---- research interest cards — specimen tags ---- */
 .interest-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -330,13 +341,14 @@ hr.rule {
 .interest-card {
   background: var(--card);
   border: 1px solid var(--rule);
-  border-left: 3px solid var(--cyan);
+  border-top: 2px solid var(--copper);
   padding: 1.1rem 1.2rem;
 }
 .interest-card h4 {
-  font-size: 0.98rem;
+  font-family: var(--display);
+  font-size: 1rem;
   margin: 0 0 0.4rem;
-  color: var(--navy);
+  color: var(--ink);
 }
 .interest-card p {
   font-size: 0.88rem;
@@ -358,10 +370,10 @@ hr.rule {
 .timeline-date {
   font-family: var(--mono);
   font-size: 0.82rem;
-  color: var(--amber);
+  color: var(--patina);
   padding-top: 0.15rem;
 }
-.timeline-body h4 { margin: 0 0 0.25rem; font-size: 1.02rem; color: var(--navy); }
+.timeline-body h4 { margin: 0 0 0.25rem; font-size: 1.04rem; font-family: var(--display); color: var(--ink); }
 .timeline-place { margin: 0 0 0.35rem; font-size: 0.88rem; color: var(--muted); }
 .timeline-detail { margin: 0; font-size: 0.9rem; line-height: 1.55; }
 
@@ -379,7 +391,7 @@ hr.rule {
   color: var(--muted);
   font-weight: 500;
   padding: 0.5rem 0.8rem;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid var(--ink);
 }
 .course-table td {
   padding: 0.6rem 0.8rem;
@@ -388,7 +400,7 @@ hr.rule {
 .course-table td:first-child {
   font-family: var(--mono);
   font-size: 0.8rem;
-  color: var(--cyan-strong);
+  color: var(--patina);
   white-space: nowrap;
 }
 .course-table tbody tr:nth-child(odd) { background: var(--paper-dim); }
@@ -407,10 +419,10 @@ hr.rule {
 .material-code {
   font-family: var(--mono);
   font-size: 0.72rem;
-  color: var(--amber);
+  color: var(--copper);
   margin: 0 0 0.3rem;
 }
-.material-card h4 { margin: 0 0 0.6rem; font-size: 0.96rem; color: var(--navy); }
+.material-card h4 { margin: 0 0 0.6rem; font-size: 0.98rem; font-family: var(--display); color: var(--ink); }
 .material-card ul { margin: 0; padding-left: 1.1rem; font-size: 0.85rem; line-height: 1.7; color: var(--ink); }
 .material-card .soon { color: var(--muted); font-style: italic; }
 
@@ -432,13 +444,13 @@ hr.rule {
   cursor: pointer;
   margin-bottom: -1px;
 }
-.pub-tab.active { color: var(--navy); border-bottom-color: var(--cyan); }
+.pub-tab.active { color: var(--ink); border-bottom-color: var(--copper); }
 .pub-count {
   font-size: 0.72rem;
   color: var(--muted);
   margin-left: 0.3rem;
 }
-.pub-tab.active .pub-count { color: var(--amber); }
+.pub-tab.active .pub-count { color: var(--copper); }
 
 .pub-list { list-style: none; margin: 0 0 1rem; padding: 0; counter-reset: pub; max-width: 78ch; }
 .pub-item {
@@ -460,9 +472,9 @@ hr.rule {
 }
 .pub-authors { margin: 0 0 0.3rem; font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
 .pub-authors strong { color: var(--ink); font-weight: 600; }
-.pub-title { margin: 0 0 0.3rem; font-size: 0.98rem; line-height: 1.5; color: var(--ink); }
-.pub-title sup { color: var(--cyan-strong); font-size: 0.7em; }
-.pub-venue { margin: 0; font-size: 0.82rem; color: var(--amber); }
+.pub-title { margin: 0 0 0.3rem; font-size: 1rem; line-height: 1.5; color: var(--ink); font-family: var(--display); }
+.pub-title sup { color: var(--copper-deep); font-size: 0.7em; }
+.pub-venue { margin: 0; font-size: 0.82rem; color: var(--patina); }
 
 /* ---- project idea cards ---- */
 .project-grid {
@@ -471,18 +483,19 @@ hr.rule {
   gap: 1.1rem;
 }
 .project-card {
-  background: var(--navy);
-  color: #E9EEF1;
+  background: var(--panel);
+  color: #EFE7D6;
+  border-top: 2px solid var(--patina);
   padding: 1.3rem 1.3rem;
 }
 .project-card h4 {
   font-family: var(--mono);
   font-size: 0.92rem;
-  color: var(--cyan);
+  color: var(--copper);
   margin: 0 0 0.6rem;
   line-height: 1.4;
 }
-.project-card p { margin: 0; font-size: 0.88rem; line-height: 1.6; color: var(--muted-on-navy); }
+.project-card p { margin: 0; font-size: 0.88rem; line-height: 1.6; color: var(--muted-on-panel); }
 
 /* ---- activity / awards ---- */
 .plain-list { list-style: none; margin: 0 0 0.5rem; padding: 0; max-width: 78ch; }
@@ -496,7 +509,7 @@ hr.rule {
 .tag-date {
   font-family: var(--mono);
   font-size: 0.76rem;
-  color: var(--amber);
+  color: var(--patina);
   margin-right: 0.6rem;
 }
 
@@ -527,7 +540,7 @@ hr.rule {
   font-size: 0.88rem;
 }
 .conf-list .conf-row:first-child { border-top: none; }
-.conf-date { font-family: var(--mono); font-size: 0.76rem; color: var(--amber); padding-top: 0.1rem; }
+.conf-date { font-family: var(--mono); font-size: 0.76rem; color: var(--patina); padding-top: 0.1rem; }
 .conf-title { line-height: 1.5; }
 .conf-place { display: block; font-size: 0.8rem; color: var(--muted); margin-top: 0.1rem; }
 
@@ -549,7 +562,7 @@ hr.rule {
   top: 1rem; right: 1rem;
   z-index: 30;
   width: 42px; height: 42px;
-  background: var(--navy);
+  background: var(--panel);
   border: none;
   border-radius: 3px;
   flex-direction: column;
@@ -558,7 +571,7 @@ hr.rule {
   gap: 5px;
   cursor: pointer;
 }
-.nav-toggle span { width: 20px; height: 2px; background: #E9EEF1; }
+.nav-toggle span { width: 20px; height: 2px; background: #EFE7D6; }
 
 /* =====================================================================
    Responsive
